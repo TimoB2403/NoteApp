@@ -90,7 +90,7 @@ class NotesApp {
     //     });
     // }
 }
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CONSOLE LOGS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CONSOLE LOGS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 const notesApp = new NotesApp();
 
@@ -104,7 +104,7 @@ notesApp.addNote(note1);
 notesApp.addNote(note2);
 notesApp.addNote(note3);
 
-// Alle Notizen anzeigen ( GET NOTES )
+// Alle Notizen anzeigen ( GET NOTES 1 )
 
 console.log("Alle Notizen:");
 notesApp.getNotes().forEach(function(note) {
@@ -113,7 +113,7 @@ notesApp.getNotes().forEach(function(note) {
 
 console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Alle Notizen");
 
-// Wichtige Notizen anzeigen ( IMPORTA4NT NOTES )
+// Wichtige Notizen anzeigen ( IMPORT4NT NOTES )
 
 console.log("Wichtige Notizen:");
 notesApp.getImportantNotes().forEach(function(note) {
@@ -127,7 +127,7 @@ console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Wichtige Notizen");
 notesApp.updateNote(note2.id, "Neue Einkaufsliste", "Brot Käse und Milch", true, 2, ["persoenlich"]);
 
 
-// Notizen nach dem Aktualisieren anzeigen
+// Notizen nach dem Aktualisieren anzeigen ( GET NOTES 2)
 
 console.log("Notizen nach dem Aktualisieren:");
 notesApp.getNotes().forEach(function(note) {
@@ -140,7 +140,7 @@ console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Updated Notizen");
 
 notesApp.toggleImportant(note1.id);
 
-// Notizen nach dem Umschalten der Wichtigkeit anzeigen
+// Notizen nach dem Umschalten der Wichtigkeit anzeigen ( GET NOTES 3)
 
 console.log("Notizen nach dem Umschalten der Wichtigkeit:");
 notesApp.getNotes().forEach(function(note) {
@@ -151,13 +151,13 @@ console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Neue Wichtigkeit Notizen");
 
 // Notizen suchen ( SEARCH NOTES )
 
-// const searchResults = notesApp.searchNotes("urlaub");
-// console.log("Suchergebnisse:");
-// searchResults.forEach(function(note) {
-//     console.log(`ID: ${note.id}, Title: ${note.title}, Content: ${note.content}, Important: ${note.important}, Priority: ${note.priority}, Tags: ${note.tags}, Created: ${note.dateCreated}, Updated: ${note.lastUpdated}`);
-// });
+const searchResults = notesApp.searchNotes("urlaub");
+console.log("Suchergebnisse:");
+searchResults.forEach(function(note) {
+    console.log(`ID: ${note.id}, Title: ${note.title}, Content: ${note.content}, Important: ${note.important}, Priority: ${note.priority}, Tags: ${note.tags}, Created: ${note.dateCreated}, Updated: ${note.lastUpdated}`);
+});
 
-// Notizen nach Titel sortieren
+// Notizen sortieren ( NACH TITEL )
 
 // notesApp.sortNotes("title");
 // console.log("Notizen nach Titel sortiert:");
@@ -165,7 +165,7 @@ console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Neue Wichtigkeit Notizen");
 //     console.log(`ID: ${note.id}, Title: ${note.title}, Content: ${note.content}, Important: ${note.important}, Priority: ${note.priority}, Tags: ${note.tags}, Created: ${note.dateCreated}, Updated: ${note.lastUpdated}`);
 // });
 
-// Notizen nach Priorität sortieren
+// Notizen sortieren ( NACH PRIORITAETEN )
 
 // notesApp.sortNotes("priority");
 // console.log("Notizen nach Priorität sortiert:");
@@ -173,7 +173,7 @@ console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Neue Wichtigkeit Notizen");
 //     console.log(`ID: ${note.id}, Title: ${note.title}, Content: ${note.content}, Important: ${note.important}, Priority: ${note.priority}, Tags: ${note.tags}, Created: ${note.dateCreated}, Updated: ${note.lastUpdated}`);
 // });
 
-// Notizen nach Tag filtern 
+// Notizen filtern ( NACH TAG )
 
 // const tagResults = notesApp.filterByTag("personal");
 // console.log("Notizen nach Tag "personal" gefiltert:");
@@ -188,7 +188,7 @@ notesApp.deleteNote(noteId);
 
 // Notizen nach dem Löschen anzeigen
 
-console.log("Notizen nach dem Löschen:");
+console.log("Notizen nach dem Loeschen:");
 notesApp.getNotes().forEach(function(note) {
     console.log(`ID: ${note.id}, Title: ${note.title}, Content: ${note.content}, Important: ${note.important}, Priority: ${note.priority}, Tags: ${note.tags}, Created: ${note.dateCreated}, Updated: ${note.lastUpdated}`);
 });
